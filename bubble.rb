@@ -10,25 +10,24 @@
 def bubble_sort(array)
   loop do
     swapped = false
-    break if array.length == 1 || array.length == 0
+    break if array.length == 1 || array.length.zero?
+
     array.each_with_index do |num2, i|
-      num1 = array[i-1]
-      if i == 0
-        next
-      else
-        if num1 > num2
-          array[i-1] = num2
-          array[i] = num1
-          swapped = true
-        end
+      num1 = array[i - 1]
+      (next if i.zero?)
+
+      if num1 > num2
+        array[i - 1] = num2
+        array[i] = num1
+        swapped = true
       end
     end
     break if swapped == false
   end
 
-  return array
+  array
 end
 
-p bubble_sort([1,3,2,9,6,5,8])
-p bubble_sort([4,3,78,2,0,2])
-p bubble_sort([2,-5,8,-1,-10,11,7])
+p bubble_sort([1, 3, 2, 9, 6, 5, 8])
+p bubble_sort([4, 3, 78, 2, 0, 2])
+p bubble_sort([2, -5, 8, -1, -10, 11, 7])
