@@ -29,4 +29,6 @@ def bubble_sort(array)
   return array
 end
 
-bubble_sort([1,3,2,9,6,5,8])
+p bubble_sort([1,3,2,9,6,5,8])
+p bubble_sort([4,3,78,2,0,2])
+p bubble_sort([2,-5,8,-1,-10,11,7])
